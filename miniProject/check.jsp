@@ -35,7 +35,7 @@
 					String update = "UPDATE YEO_TBL_USER SET CNT = 0 WHERE U_ID = '" + uId + "'";
 					stmt.executeUpdate(update);
 					if(status.equals("A")){ // 관리자
-						response.sendRedirect("user.jsp");
+						response.sendRedirect("main.jsp");
 					} else { // 일반 사용자
 						response.sendRedirect("main.jsp");
 					}

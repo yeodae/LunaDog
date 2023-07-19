@@ -10,6 +10,7 @@
             bottom:-100px;
             width: 1000px;
             margin: 0 auto;
+            line-height: 20px;
         }
         #Fbody{
             margin-top: 100px;

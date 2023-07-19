@@ -42,11 +42,9 @@
             justify-content: center;
             align-items: center;
             border-radius: 10px;
-            box-shadow: -5px -5px 10px #fff, 5px 5px 30px
-
-            #babebc;
+            box-shadow: -5px -5px 10px #fff, 5px 5px 30px #babebc;
             overflow: hidden;
-            
+            padding-bottom: 100px;
              min-height: calc(100% - 120px);
              margin-top:150px;
              font-size:15px;
@@ -103,6 +101,7 @@
         footer{
 			 margin-top: 100px; 
 			}
+	
 </style>
 </head>
 <body>

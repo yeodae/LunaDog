@@ -147,7 +147,9 @@
         	padding-top: 50px;
         	padding-bottom: 50px;
         }
-        
+        #divpadding{
+        	margin-bottom: 100px;
+        }
     </style>
 </head>
 
@@ -281,7 +283,7 @@
 						<p><a href="https://map.naver.com/v5/search/%EB%8B%AC%EB%A3%A8%EB%94%94%EC%9B%80/place/1245981672?c=15,0,0,0,dh&isCorrectAnswer=true" target="_blank"><img src="달루디움.png"><hr><span>달루디움</span></a></p>
 					</div>
 				</div>
-				<div class="img">					
+				<div class="img" id="divpadding">					
 					<div>					
 						<p><a href="https://map.naver.com/v5/search/%EC%98%AC%EB%9D%BC%EB%8F%85/place/1684317237?c=15,0,0,0,dh&isCorrectAnswer=true" target="_blank"><img src="올라독.jpg"><hr><span>울라독</span></a></p>
 					</div>

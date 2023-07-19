@@ -76,7 +76,7 @@ header nav ul li:hover a:after {opacity:1;}
 	    				}else if(uId==null){
 	    					session.setAttribute("uId",null);
 	    					session.setMaxInactiveInterval(0);
-	    					response.sendRedirect("header2.jsp");
+	    					/* response.sendRedirect("header2.jsp"); */
 	    					%>
 	    					<li><a href="join.jsp">회원가입</a></li>
 	    					<li><a href="login.jsp">로그인</a></li>
