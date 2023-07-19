@@ -204,7 +204,7 @@
 			kind = "Y";
 		}else{kind="N"}
 		window.open("user_ban.jsp?uId="+uId+"&kind="+kind,"popup"
-				,"width=500, height=500");
+				,"width=300, height=150");
 	}
 	function cntChange(uId){ // 로그인 시도횟수
 		window.open("user_cnt.jsp?uId="+uId,"popup"

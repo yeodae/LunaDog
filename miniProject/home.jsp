@@ -23,10 +23,11 @@
              margin-top: 130px;
         }
         #Lcontainer{
+        	width: 1920px;
             border: 1px solid white;
             text-align: center;
             margin: 0 auto; 
-            display: flex;
+           
             justify-content: center;
             align-items: center;
             border-radius: 10px;
@@ -35,6 +36,7 @@
             #babebc;
             overflow: hidden;
             font-size:15px;
+           
         }
         #Limg{
             margin: 5px auto;
@@ -107,6 +109,11 @@
 			margin: 0 auto;
 			margin-top: 100px;
 			}
+		.box1{
+			float:left;
+			margin : 0 auto;
+			display:block;
+		}
         
     </style>
 </head>
@@ -115,7 +122,25 @@
 	<jsp:include page="header2.jsp"/>
 	<%-- <%@ include file="header2.jsp" %> --%>
 	<div id="Lcontainer">
-	
+		<div class="box1">
+			<img src="홈메인.PNG">
+		</div>
+		<div class="box1">
+			<img src="홈2.PNG">
+		</div>
+		<div class="box1">
+			<img src="홈메인2.PNG">
+		</div>
+		<div class="box1">
+			<img src="홈메인3.PNG">
+		</div>
+		<div class="box1">
+			<img src="홈메인4.PNG">
+		</div>
+		<div class="box1">
+			<img src="홈메인5.PNG">
+		</div>
+
 	</div>
 	<%-- <%@ include file="footer.jsp" %> --%>
 	<footer><%@ include file="footer2.jsp" %></footer>

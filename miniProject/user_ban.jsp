@@ -22,8 +22,8 @@
              margin-top: 10px;
         }
         .div{
-        	width: 300px;
-        	height: 300px;
+        	width: 200px;
+        	height: 100px;
             border: 1px solid white;
             text-align: center;
             margin: 0 auto; 

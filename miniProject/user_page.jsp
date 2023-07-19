@@ -281,7 +281,7 @@
 			kind = "Y";
 		}else{kind="N"}
 		window.open("guardian_ban.jsp?uName="+uName+"&kind="+kind,"popup"
-				,"width=100, height=100");
+				,"width=300, height=150");
 	}
 	
 	function getReturn(){
