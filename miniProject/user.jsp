@@ -73,7 +73,7 @@
 <img src="로고2.jpg" id="logoBox">
 <%@ include file="header2.jsp" %>
 	<%
-		String uId = (String) session.getAttribute("userId");
+		uId = (String) session.getAttribute("userId");
 		String uName = (String) session.getAttribute("userName");
 		String uSt = (String) session.getAttribute("status");
 		

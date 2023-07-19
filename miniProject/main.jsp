@@ -76,7 +76,7 @@
 	<%@ include file="header2.jsp" %>
 	<%
 		
-		String uId = (String) session.getAttribute("userId");
+		/* String uId = (String) session.getAttribute("userId"); */
 		String uName = (String) session.getAttribute("userName");
 		String uSt = (String) session.getAttribute("status");
 	
@@ -87,8 +87,8 @@
 		mi = session.getMaxInactiveInterval() / 60;
 		out.println(mi + "분"); */
 		
-		/* String uId = (String) session.getAttribute("userId");
-		out.println(uId); */
+	 	/* String uId = (String) session.getAttribute("userId"); */
+	/* 	out.println(uId); */
 		
 		
 	%>
@@ -131,5 +131,4 @@
 		var form = document.pet;
 		form.submit();
 	}
-	
 	</script>

@@ -126,7 +126,7 @@
 			ResultSet rs = null;
 			Statement stmt = null;
 			
-			String uId = request.getParameter("uId");
+			uId = request.getParameter("uId");
 			try {
 				String sql = "select * from YEO_TBL_USER WHERE STATUS = 'U' ORDER BY U_ID ASC";
 				stmt = conn.createStatement();

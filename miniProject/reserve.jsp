@@ -122,7 +122,7 @@
 			ResultSet rs = null;
 			Statement stmt = null;
 			
-			String uId = request.getParameter("uId");
+			uId = request.getParameter("uId");
 			
 			try {
 				String sql = "select * from YEO_TBL_RESERVE WHERE STATUS = 'U' ORDER BY DDAY ASC";

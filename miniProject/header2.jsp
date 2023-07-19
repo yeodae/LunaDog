@@ -64,14 +64,33 @@ header nav ul li:hover a:after {opacity:1;}
 	    		<ul>
 	    			<li class="active"><a href="#">홈</a></li>
 	    			<li><a href="#">About</a></li>
-	    			<li><a href="#">Corporation</a></li>
-	    			<li><a href="join.jsp">회원가입</a></li>
-	    			<li><a href="login.jsp">로그인</a></li>
+	    			<li><a href="https://www.instagram.com/lunadog__official/">인스타그램</a></li>
+	    			<!-- <li><a href="join.jsp">회원가입</a></li> -->
+	    			<% 
+	    			String uId = (String) session.getAttribute("userId");
+	    				if(uId!=null){
+	    					%>
+	    					<li><a href="price.jsp?">미용비용</a></li>
+	    					<li><a href="login.jsp">로그아웃</a></li>
+	    					<%
+	    				}else if(uId==null){
+	    					session.setAttribute("uId",null);
+	    					session.setMaxInactiveInterval(0);
+	    					%>
+	    					<li><a href="join.jsp">회원가입</a></li>
+	    					<li><a href="login.jsp">로그인</a></li>
+	    					<%
+	    				}			
+	    			%>
+	    			<!-- <li><a href="login.jsp">로그인</a></li> -->
 	    		</ul>
 	    	</nav>
     	</div>
     </header>
-
-
 </body>
 </html>
+<script>
+	function getReturn(){
+		location.reload();
+	}
+</script>
