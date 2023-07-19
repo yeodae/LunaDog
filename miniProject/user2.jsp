@@ -14,10 +14,99 @@
 		border : 1px solid black;
 		padding : 5px 10px;
 	}
+ 		@font-face {
+    font-family: 'Ramche';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Ramche.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+	}
+         *{
+          font-family: "Ramche";
+         }
+         
+        body{
+        	box-sizing: border-box; 
+            margin: 0;
+             padding: 0;
+             margin-top: 150px;
+        }
+        #container{
+        	line-height: 20px;
+            width: 1200px;
+            border: 1px solid white;
+            text-align: center;
+            margin: 0 auto; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: -5px -5px 10px #fff, 5px 5px 30px
+
+            #babebc;
+            overflow: hidden;
+            
+            min-height: calc(100% - 120px);
+             margin-top:50px;
+             font-size:15px;
+        }
+		form input {
+            background: #eee;
+            padding: 16px;
+            margin: 8px 0;
+            width: 100%;
+            border: 0;
+            outline: none;
+            border-radius: 20px;
+            box-shadow: inset 7px 2px 10px #babebc, inset -5px -5px 12px #fff;
+        }
+          input:hover{
+            font-weight: bold;
+            }
+            
+            #logoBox{
+            margin: 0 auto;
+            padding: 0;
+            width: 300px;   
+        }
+         [type="submit"] {
+        vertical-align: middle;
+        appearance: none;
+        background-color: white;
+        box-shadow: none;
+        padding: 2px;
+        width: 2px;
+      
+        }
+          label:hover{
+            border-bottom: 3px solid orange;
+            cursor: pointer;
+        }
+        input:checked + label {
+            color:rgb(233, 151, 0);
+            border-bottom: 3px solid orange;
+            font-weight: bold;
+        }
+        
+        table{
+         text-align: center;
+        
+            margin: 0 auto; 
+        }
+        #submit{
+         	width: 10%;
+        }
+        #btn{
+        	width: 30%;
+        }
+        footer{
+			 margin-top: 50px; 
+			}
 </style>
 </head>
 <body>
 <%@ include file="../jsp_heid_set.jsp" %>
+<%@ include file="header2.jsp" %>
+<div id="container">
 <form name="list">
 	<table>
 		<tr>
@@ -89,9 +178,11 @@
 			} 
 		%>
 	</table>
-	<input type="button" onclick="userUpdate('<%=request.getParameter("U_ID")%>')" value="수정"/>
-	<input type="button" onclick="userRemove()" value="삭제"/>
+	<input type="button" onclick="userUpdate('<%=request.getParameter("U_ID")%>')" value="고객정보 변경" id="btn"/>
+	<input type="button" onclick="userRemove()" value="삭제" id="btn"/>
 </form>
+</div>
+<footer><jsp:include page="footer2.jsp"/></footer>
 </body>
 </html>
 <script>
@@ -123,7 +214,6 @@
 		var form = document.list;
 		location.href = "user_page.jsp?uId=" + form.user.value;
 	}
-	
 	function getReturn(){
 		location.reload();
 	}

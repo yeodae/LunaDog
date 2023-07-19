@@ -41,3 +41,8 @@
 	%>
 </body>
 </html>
+<script>
+	alert("정상 추가 되었습니다.");
+	window.close();
+	window.opener.getReturn();
+</script>

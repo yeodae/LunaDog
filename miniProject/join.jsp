@@ -5,24 +5,128 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+@font-face {
+    font-family: 'Ramche';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-1@1.1/Ramche.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+	}
+         *{
+          font-family: "Ramche";
+         }
+		#Jbody{
+        	box-sizing: border-box; 
+            margin: 0;
+             padding: 0;
+             margin-top: 130px;
+        }
+        #Jcontainer{
+        	text-align: center;
+            width: 500px;
+            border: 1px solid white;
+            margin: 0 auto; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            box-shadow: -5px -5px 10px #fff, 5px 5px 30px #babebc;
+           /*  min-height: 480px; */
+            overflow: hidden;
+	        height: auto;
+		    min-height: 100%;
+		
+			}
+			footer{
+				display: flex;
+				width: 1000px;
+			   margin: 0 auto;
+			 margin-top: 100px;
+			}
+        #Limg{
+            margin: 5px auto;
+            display: flex;
+        }
+        form input {
+            background: #eee;
+            padding: 10px;
+            margin: 8px 0;
+            width: 50%;
+            border: 0;
+            outline: none;
+            border-radius: 20px;
+            box-shadow: inset 7px 2px 10px #babebc, inset -5px -5px 12px #fff;
+            
+        }
+        
+      
+        [type="radio"] {
+        vertical-align: middle;
+        appearance: none;
+        background-color: white;
+        box-shadow: none;
+        padding: 2px;
+        width: 2px;
+      
+        }
+        [type="submit"]{
+            width: 20%;
+            padding: 10px;
+        }
+        #idch{
+            margin: 10px;
+            width: 15%;
+            padding: 5px;
+        }
+        #jo{
+            width: 20%;
+            
+        }
+        #wc{
+            margin: 30px;
+            width: 450px;
+        }
+        label:hover{
+            border-bottom: 3px solid orange;
+            cursor: pointer;
+        }
+        input:checked + label {
+            color:rgb(233, 151, 0);
+            border-bottom: 3px solid orange;
+            font-weight: bold;
+        }
+	
+</style>
 </head>
-<body>
-	<form action="join_insert.jsp" name = "userForm" method="post">
-		<div>아이디 : <input type="text" name="uId" placeholder="영문+숫자 조합"><input type="button" onclick="idCheck();" value="중복체크" ></div>
-		<div>패스워드 : <input type="password" name="pwd1" placeholder="4자리 이상"></div>
-		<div>패스워드 확인 : <input type="password" name="pwd2"></div>
-		<div>보호자이름 : <input type="text" name="uName"></div>
-		<div>연락처 : <input type="text" name="phone"></div>
-		<div>반려동물명 : <input type="text" name="pName"></div>
-		<div>반려동물종류 : <select name="pType">
-			<option>강아지</option>
-			<option>고양이</option>
-		</select></div>
-		<div>특이사항 : <input type="text" name="memo" placeholder="심장병/입질/슬개골수술"></div>
-		<div>이벤트 수신여부 : 수신허용<input type="radio" name="evt" value="Y">
-				수신거부<input type="radio" name="evt" value="N"></div>
-		<div><input type="button" onclick="userJoin()" value="회원가입"></div>
-	</form>
+<body id="Jbody">
+<%@ include file="header2.jsp" %>
+<div id="Jcontainer">
+        <div id="wc">
+        <h2>회원가입</h2>
+    	<form action="join_insert.jsp" name = "userForm" method="post">
+		<div> <input type="text" name="uId" placeholder="아이디" style="width: 30%;"><input id="idch" type="button" onclick="idCheck();" value="중복여부" ></div>
+		<div> <input type="password" name="pwd1" placeholder="비밀번호"></div>
+		<div> <input type="password" name="pwd2" placeholder="확인 비밀번호"></div>
+		<div> <input type="text" name="uName" placeholder="보호자 이름"></div>
+		<div> <input type="text" name="phone" placeholder="휴대전화번호"></div>
+		<div><input type="radio" id="petType" name="pType" value="M" class="pType" checked>
+            <label for="petType">강아지</label>
+            <input type="radio" id="petType2" name="pType" value="W" class="pType">
+            <label for="petType2">고양이</label>
+ 		</div>
+		<div> <input type="text" name="pName" placeholder="반려동물 이름"></div>
+		<div><input type="text" name="memo" placeholder="특이사항(심장병/입질/슬개골수술)"></div>
+		<div><input type="radio" id="alam1" name="evt" value="Y" class="evt" checked>
+            <label for="alam1">알림톡 허용</label>
+            <input type="radio" id="alam2" name="evt" value="N" class="evt">
+            <label for="alam2">알림톡 거부</label>
+ 		</div>
+		<div><input type="text" name="pwhint" placeholder="PW 분실 시 확인용 단어"></div>
+		<div><input type="button" onclick="userJoin()" value="회원가입" id="jo"></div>
+	    </form>
+        </div>
+    </div>
+    <footer><%@ include file="footer2.jsp" %></footer>
 </body>
 </html>
 <script>
