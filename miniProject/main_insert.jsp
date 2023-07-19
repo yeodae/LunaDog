@@ -84,7 +84,7 @@
 <body>
 <div id="container">
 	<%@ include file="../jsp_heid_set.jsp" %>
-<form name="updateForm" action="main_insert_sql.jsp">
+<form name="userForm" action="main_insert_sql.jsp">
 <h3><span style="color:rgb(233, 151, 0);">반려동물 정보</span>입력</h3>
 	<%
 	request.setCharacterEncoding("UTF-8");
@@ -124,14 +124,43 @@
 		}
 	%>
 
-	<input type="submit" onclick="userUpdate()">
+	<input type="button" value="정보추가" onclick="petJoin()">
 </form>
 </div>
 </body>
 </html>
 <script>
-function userJoin(){
+function petJoin(){
 	var form = document.userForm;
+	
+	var regType1 = /^[ㄱ-ㅎ|가-힣]+$/;
+	if(!regType1.test(form.pName.value) ){
+		alert("반려동물명은 한글로만 입력해주세요");
+		form.pName.select();
+		return;
+	}
+	if(!regType1.test(form.pType.value) ){
+		alert("반려동물종류는 한글로만 입력해주세요");
+		form.pType.select();
+		return;
+	}
+	if(!regType1.test(form.pKind.value) ){
+		alert("품종은 한글로만 입력해주세요");
+		form.pKind.select();
+		return;
+	}
+	var numb = /^[0-9]+$/;
+	if(!numb.test(form.age.value) ){
+		alert("반려동물나이는 숫자로만 입력해주세요");
+		form.pKind.select();
+		return;
+	}
+	if(form.pName.value == "" || form.pName.value == undefined){
+		alert("반려동물명은 필수 값 입니다.");
+		form.pName.focus();
+		return;
+	}
+	
 	form.submit();
 }
 	

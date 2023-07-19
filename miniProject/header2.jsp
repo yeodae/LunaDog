@@ -70,12 +70,13 @@ header nav ul li:hover a:after {opacity:1;}
 	    			String uId = (String) session.getAttribute("userId");
 	    				if(uId!=null){
 	    					%>
-	    					<li><a href="price.jsp">미용비용</a></li>
+	    					<li><a href="main.jsp">마이페이지</a></li>
 	    					<li><a href="login.jsp">로그아웃</a></li>
 	    					<%
 	    				}else if(uId==null){
 	    					session.setAttribute("uId",null);
 	    					session.setMaxInactiveInterval(0);
+	    					response.sendRedirect("header2.jsp");
 	    					%>
 	    					<li><a href="join.jsp">회원가입</a></li>
 	    					<li><a href="login.jsp">로그인</a></li>

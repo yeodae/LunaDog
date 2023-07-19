@@ -104,10 +104,14 @@ table{
 			Statement stmt = null;
 			
 			String pName = request.getParameter("pName");
+			%>
+			<div><H3><%=pName%>의 <span style="color:rgb(233, 151, 0);">방문내역</span></H2></div>
+			<%
 			try {
 				String sql = "SELECT * FROM YEO_TBL_HISTORY WHERE PET_NAME = '"+pName+"'";
 				stmt = conn.createStatement();
 				rs = stmt.executeQuery(sql);
+				
 				while (rs.next()) {
 					String uName = rs.getString("U_NAME"); 
 					String pKind = rs.getString("PET_KIND");
@@ -120,10 +124,7 @@ table{
 					String dDay = rs.getString("DDAY");
 					
 		%>
-		
-		<div><H3><%=uName%>님은 <span style="color:rgb(233, 151, 0);">루나독</span>에 <span style="color:rgb(233, 151, 0);"><%=visit%>번</span> 방문해주셨어요!</H2></div>
-		
-		<div><h2>이전 방문기록</h2></div>
+			
 		<table>
 		<tr>
 			<th>반려동물이름</th>			
@@ -145,11 +146,9 @@ table{
 				out.println("Member 테이블 호출이 실패했습니다.<br>");
 				out.println("SQLException: " + ex.getMessage());
 			} 
+			
 		%>
-
-	</table>
-	
-		
+	</table>	
 	<div><input type="button" value="확인" onclick="back()"></div>
 	
 </form>

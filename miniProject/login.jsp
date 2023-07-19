@@ -124,6 +124,7 @@
 		if(request.isRequestedSessionIdValid()){
 			/* out.println("청소중"); */
 			session.invalidate();
+			response.sendRedirect("login.jsp");
 		}
 		
 		/* String uId = (String) session.getAttribute("userId");

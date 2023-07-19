@@ -125,9 +125,11 @@
 		<div class="box1">
 			<img src="홈메인.PNG">
 		</div>
+		<a href="login.jsp">
 		<div class="box1">
 			<img src="홈2.PNG">
 		</div>
+		</a>
 		<div class="box1">
 			<img src="홈메인2.PNG">
 		</div>

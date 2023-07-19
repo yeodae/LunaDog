@@ -20,6 +20,7 @@
             margin: 0;
              padding: 0;
              margin-top: 130px;
+             font-size: 15px;
         }
         #Jcontainer{
         	text-align: center;

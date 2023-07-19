@@ -15,7 +15,6 @@
          *{
           font-family: "Ramche";
          }
-         
         body{
         	box-sizing: border-box; 
             margin: 0;
@@ -32,18 +31,17 @@
             justify-content: center;
             align-items: center;
             border-radius: 10px;
-            box-shadow: -5px -5px 10px #fff, 5px 5px 30px #babebc;
+            box-shadow: -5px -5px 10px white, 5px 5px 30px white;
             overflow: hidden;
             
             min-height: calc(100% - 120px);
-             margin-top:50px;
-             font-size:15px;
+ 			font-size:15px;
         }
 		img {
 		  transition: all 0.3s linear;
 		}
 		img:hover {
-		  transform: scale(1.1);
+		  transform: scale(1.05);
 		  overflow: hidden
 		}
          [type="submit"] {
@@ -51,22 +49,14 @@
         appearance: none;
         background-color: white;
         box-shadow: none;
-        padding: 2px;
-        width: 2px;
+        padding: 10px;
+        width: 50px;
       
-        }
-          label:hover{
-            border-bottom: 3px solid orange;
-            cursor: pointer;
-        }
-        footer{
-			 margin-top: 50px; 
-			}
+        }  
 </style>
 </head>
 <body>
 <%@ include file="../jsp_heid_set.jsp" %>
-<%@ include file="header2.jsp" %>
 <div id="container">
 <form name="list">
 	<div>
@@ -75,19 +65,15 @@
 	<div>
 		<img alt="price2" src="가격표2.png">
 	</div>
-	
+	<input type="submit" value="닫기" onclick="back()">
 	
 </form>
 </div>
-<footer><jsp:include page="footer2.jsp"/></footer>
 </body>
 </html>
 <script>
-	function page(uId){//상세페이지
-		var form = document.list;
-		location.href = "user_page.jsp?uId=" + form.user.value;
-	}
-	function getReturn(){
-		location.reload();
-	}
+function back(){
+	window.opener.getReturn();
+	window.close();
+}
 </script>
