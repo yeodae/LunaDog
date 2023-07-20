@@ -124,8 +124,12 @@
 </html>
 <script>
 function resIns(){
-	var form = document.userForm;
+	var form = document.updateForm;
 	form.submit();
+}
+if(form.sDate.value<=form.eDate.value){
+	alert("종료시간이 시작시간보다 빠릅니다.");
+	return;
 }
 
 	

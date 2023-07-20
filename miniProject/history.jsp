@@ -113,6 +113,7 @@ table{
 				rs = stmt.executeQuery(sql);
 				
 				while (rs.next()) {
+					String hpName = rs.getString("PET_NAME"); 
 					String uName = rs.getString("U_NAME"); 
 					String pKind = rs.getString("PET_KIND");
 					String pHeight 
@@ -120,9 +121,13 @@ table{
 					String cut 
 						= rs.getString("CUT") != null ? rs.getString("CUT") : "방문후 상담";
 					String visit 
-						= rs.getString("VISIT")  != null ? rs.getString("VISIT") : "-";
+						= rs.getString("VISIT")  != null ? rs.getString("VISIT") : "0";
 					String dDay = rs.getString("DDAY");
 					
+					if(uName==null){
+						out.println("이전예약 완료내역이 존재하지 않습니다.");	
+					}
+				
 		%>
 			
 		<table>
@@ -141,12 +146,21 @@ table{
 			<td><%=dDay%></td>
 			</tr>
 		<%
+		if(!pName.equals(hpName)){
+			out.println("이전예약 완료내역이 존재하지 않습니다.");	
+			out.println("이전예약 완료내역이 존재하지 않습니다.");	
+		}
 				}
 			}catch (SQLException ex) {
 				out.println("Member 테이블 호출이 실패했습니다.<br>");
 				out.println("SQLException: " + ex.getMessage());
 			} 
-			
+		
+			/* if(pName!=null){
+				if(request.getParameter("VISIT")==null){
+					out.println("이전예약 완료내역이 존재하지 않습니다.");	
+				} 
+			}	 */	
 		%>
 	</table>	
 	<div><input type="button" value="확인" onclick="back()"></div>
