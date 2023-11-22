@@ -64,7 +64,8 @@
 * 나의 게시글
 * 팔로우
 <br><br>
-## ⭐ [화면 구성도 & DB] 💾PPT : https://drive.google.com/file/d/1IKmnowClwiDWCldARyNqBlwNxaoiit04/view?usp=drive_link
+## ⭐ [화면 구성도 & DB] 💾PPT 
+https://drive.google.com/file/d/1l7Qy8DUVWDSu8UFYDouKAhKtIGYSBnZE/view?usp=drive_link
 <br>
 
 ## 💾 Mysql sql문
